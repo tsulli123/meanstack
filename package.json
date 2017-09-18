@@ -31,7 +31,8 @@
 		"body-parser": "latest",
 		"winston": "latest",
 		"mongoose": "latest",
-		"chalk": "latest"
+		"chalk": "latest",
+		"cookie-parser": "latest"
 	},
 	"devDependencies": {
 		"@angular/cli": "1.4.2",

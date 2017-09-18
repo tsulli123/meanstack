@@ -29,23 +29,25 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
 app.use(express.static(__dirname + '/dist'));
 
 // Database connection: (Change this to what your database URL is!)
-var db = mongoose.createConnection('mongodb://localhost/default');
-require('./app/database.js')(chalk, db);
+if (c.connections.database) {
+	var db = mongoose.createConnection('mongodb://localhost/default');
+	require('./app/database.js')(chalk, db);
 
 
-/* This section is the database models and controllers, UNCOMMENT this section to use as a template
-Database Models
-var schemas = {};
-var models = {
-	mongoose: mongoose,
-	items: require('./app/models/items.js')(mongoose, schemas),
-};
+	/* This section is the database models and controllers, UNCOMMENT this section to use as a template
+	Database Models
+	var schemas = {};
+	var models = {
+		mongoose: mongoose,
+		items: require('./app/models/items.js')(mongoose, schemas),
+	};
 
-//Controllers - database functions
-var controller = {
-	items: require('./app/controllers/items.js')(models, logger),
-};
-*/
+	//Controllers - database functions
+	var controller = {
+		items: require('./app/controllers/items.js')(models, logger),
+	};
+	*/
+}
 
 // This is your socket connection file
 if (c.connections.sockets)

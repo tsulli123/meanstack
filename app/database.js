@@ -9,5 +9,5 @@ module.exports = function(chalk, db) {
 		console.log(chalk.italic.bgCyan.blue(' MongoDB Connected on: ') +
 			chalk.italic.bgCyan.black('\t host:' + host + ' port: ' + port + '\t'));
 	});
-	return database;
+	return db;
 };

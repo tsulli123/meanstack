@@ -1,6 +1,18 @@
 # Default MEAN stack
 
-This is the default MEAN stack with NO and I say again, "NO" bloatware -> Do what you wish with it. Change the world.
+This is the default MEAN stack with NO and I say again, "NO" bloatware -> Do what you wish with it. Change the world.]
+
+## Requirements:
+
+You must have MongoDB installed and running. If you do not have MongoDB go into the app/config.json file and change from:
+```JSON
+"database": true
+```
+
+TO:
+```JSON
+"database": false
+```
 
 ## How to install
 
